@@ -83,7 +83,7 @@ class xor {
 
   var tabC = 1;
   const defaultTabProperties = {
-    title: "New Hypertab",
+    title: "New Tab",
     favicon: false,
   };
 
