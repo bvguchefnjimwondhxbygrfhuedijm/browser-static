@@ -477,7 +477,7 @@ class xor {
             .toString()
             .split('')
             .map((char, ind) =>
-                ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+                ind % 3 ? String.fromCharCode(char.charCodeAt() ^ 3) : char
             )
             .join('')
         );
@@ -487,7 +487,7 @@ class xor {
         return decodeURIComponent(str)
             .split('')
             .map((char, ind) =>
-                ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+                ind % 3 ? String.fromCharCode(char.charCodeAt() ^ 3) : char
             )
             .join('');
     }
