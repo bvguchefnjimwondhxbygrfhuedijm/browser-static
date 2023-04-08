@@ -633,11 +633,11 @@ div#customtheme {
   color: #e04c4c;
 }
 .chrome-tabs.chrome-tabs-dark-theme {
-  background: #202124;
+  background: #dfdeff;
 }
 .chrome-tabs.chrome-tabs-dark-theme .chrome-tab .chrome-tab-dividers::before,
 .chrome-tabs.chrome-tabs-dark-theme .chrome-tab .chrome-tab-dividers::after {
-  background: #4a4d51;
+  background: #b5b2ff;
 }
 .chrome-tabs.chrome-tabs-dark-theme
   .chrome-tab
