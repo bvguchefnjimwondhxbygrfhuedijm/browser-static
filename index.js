@@ -2160,3 +2160,9 @@ let addEl = (a, b, c) =>
 
 newTab('ht://newtab');
 
+function load(){
+if(localStorage.getItem("toload") != "none"){
+newTab(localStorage.getItem("toload"));
+localStorage.setItem("toload", "none");
+}
+}
