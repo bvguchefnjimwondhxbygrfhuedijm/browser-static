@@ -1832,7 +1832,7 @@ let newTab = (url, uxor = true) => {
     frame.setAttribute('allow', 'fullscreen');
     frame.setAttribute(
         'sandbox'
-        , 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock'
+        , 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-modals'
     );
     document.body.appendChild(frame);
     frame.setAttribute('class', 'iframething');
