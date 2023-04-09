@@ -1503,7 +1503,7 @@ const internal_pages = {
     newtab: "newTab.html"
     , extensionsmarketplace: "404.html"
     , extensions: "extensions.html"
-    , games: "games.html"
+    , games: "https://crazystuffxyz.netlify.app"
 }
 const prefix = __uv$config.prefix;
 const bare = new BareClient(__uv$config.bare);
