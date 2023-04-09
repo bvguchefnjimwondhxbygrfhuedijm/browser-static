@@ -65,7 +65,7 @@ Crazystuff is redirecting... wait for a few seconds.
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
-        let url = window.location.hach.slice(1);
+        let url = window.location.hash.slice(1);
         if (!isUrl(url)) url = 'https://search.brave.com/search?q=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
