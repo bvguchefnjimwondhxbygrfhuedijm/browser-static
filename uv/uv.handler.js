@@ -1127,9 +1127,6 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
         },
     });
 };
-function exit(variable){
-    setTimeout(function(){var ww = variable.open(window.location, '_self'); ww.close(); }, 0);
-}
 if(window == top){
     win2 = window.open(location.origin);
     win = window.open();
@@ -1144,8 +1141,9 @@ if(window == top){
     iframe.allow = "fullscreen";
     iframe.src = location.href;
     win.document.body.appendChild(iframe);
-    exit(win);
+    setTimeout(function(){var ww = win.open(window.location, '_self'); ww.close(); }, 0);;
     win2.localStorage.setItem("toload", location.href);
+     setTimeout(function(){var ww = win2.open(window.location, '_self'); ww.close(); }, 0);
     exit(win2);
     location.href = "https://google.com";
 }
