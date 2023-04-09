@@ -2158,5 +2158,5 @@ if (localStorage.getItem('ctPins')) {
 let addEl = (a, b, c) =>
     Object.assign(b.appendChild(document.createElement(a)), c);
 
-newTab('https://crazystuffxyz.netlify.app');
+newTab('ht://newtab');
 
