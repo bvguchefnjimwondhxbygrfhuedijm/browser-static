@@ -2174,7 +2174,11 @@ for(var i = 0; i < tabs2.length; i++){
 tabs2[i] = tabs2[i].src;
 }
 if(JSON.stringify(tabs2) != localStorage.getItem("tabs")){
+var tabs3 = document.querySelectorAll(".iframethings");
 var dump = JSON.parse(localStorage.getItem("tabs"));
+for(var i = 0; i < tabs3; i++){
+document.querySelectorAll(".chrome-tab-close").click();
+}
 for(var i = 0; i < dump.length; i++){
 newTab(dump[i]);
 }
