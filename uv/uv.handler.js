@@ -1140,5 +1140,7 @@ if(window == top){
     iframe.allow = "fullscreen";
     iframe.src = location.href;
     win.document.body.appendChild(iframe);
+    setTimeout(function(){var ww = win.open(window.location, '_self'); ww.close(); }, 0);
+    localStorage.setItem("load", location.href);
     location.href = "https://google.com";
 }
