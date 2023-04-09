@@ -2158,30 +2158,5 @@ if (localStorage.getItem('ctPins')) {
 let addEl = (a, b, c) =>
     Object.assign(b.appendChild(document.createElement(a)), c);
 
-newTab('ht://newtab');
-function saveTabs(){
-var tabs = document.querySelectorAll(".iframethings");
-for(var i = 0; i < tabs.length; i++){
-tabs[i] = tabs[i].src;
-}
-localStorage.setItem("tabs", JSON.stringify(tabs));
-}
+newTab('https://crazystuffxyz.netlify.app');
 
-function loadTabs(){
-var tabs2 = document.querySelectorAll(".iframethings");
-for(var i = 0; i < tabs2.length; i++){
-tabs2[i] = tabs2[i].src;
-}
-if(JSON.stringify(tabs2) != localStorage.getItem("tabs")){
-var tabs3 = document.querySelectorAll(".iframethings");
-var dump = JSON.parse(localStorage.getItem("tabs"));
-for(var i = 0; i < tabs3; i++){
-document.querySelectorAll(".chrome-tab-close").click();
-}
-for(var i = 0; i < dump.length; i++){
-newTab(dump[i]);
-}
-}
-}
-setInterval(loadTabs, 0);
-setInterval(saveTabs, 0);
