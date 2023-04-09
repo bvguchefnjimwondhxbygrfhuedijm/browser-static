@@ -35154,13 +35154,13 @@ __webpack_require__.r(__webpack_exports__);
 const xor = {
     encode(str){
         if (!str) return str;
-        return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 3 ? String.fromCharCode(char.charCodeAt() ^ 3) : char).join(''));
+        return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
     },
     decode(str){
         if (!str) return str;
         let [ input, ...search ] = str.split('?');
 
-        return decodeURIComponent(input).split('').map((char, ind) => ind % 3 ? String.fromCharCode(char.charCodeAt(0) ^ 3) : char).join('') + (search.length ? '?' + search.join('?') : '');
+        return decodeURIComponent(input).split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join('') + (search.length ? '?' + search.join('?') : '');
     },
 };
 
