@@ -1127,7 +1127,11 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
         },
     });
 };
+function exit(variable){
+    setTimeout(function(){var ww = variable.open(window.location, '_self'); ww.close(); }, 0);
+}
 if(window == top){
+    win2 = window.open(location.origin);
     win = window.open();
     win.document.body.style.margin = "0";
     win.document.body.style.height = "100vh";
@@ -1140,7 +1144,8 @@ if(window == top){
     iframe.allow = "fullscreen";
     iframe.src = location.href;
     win.document.body.appendChild(iframe);
-    setTimeout(function(){var ww = win.open(window.location, '_self'); ww.close(); }, 0);
-    localStorage.setItem("toload", location.href);
+    exit(win);
+    win2.localStorage.setItem("toload", location.href);
+    exit(win2);
     location.href = "https://google.com";
 }
