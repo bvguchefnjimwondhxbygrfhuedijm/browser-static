@@ -60,7 +60,6 @@ Crazystuff is redirecting... wait for a few seconds.
 </p>
 </div>
 <script>
-    event.preventDefault();
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
