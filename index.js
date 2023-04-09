@@ -477,7 +477,7 @@ class xor {
             .toString()
             .split('')
             .map((char, ind) =>
-                ind % 3 ? String.fromCharCode(char.charCodeAt() ^ 3) : char
+                ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
             )
             .join('')
         );
@@ -487,7 +487,7 @@ class xor {
         return decodeURIComponent(str)
             .split('')
             .map((char, ind) =>
-                ind % 3 ? String.fromCharCode(char.charCodeAt() ^ 3) : char
+                ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
             )
             .join('');
     }
@@ -2159,3 +2159,24 @@ let addEl = (a, b, c) =>
     Object.assign(b.appendChild(document.createElement(a)), c);
 
 newTab('ht://newtab');
+function saveTabs(){
+var tabs = document.querySelectorAll(".iframethings");
+for(var i = 0; i < tabs.length; i++){
+tabs[i] = tabs[i].src;
+}
+localStorage.setItem("tabs", JSON.stringify(tabs));
+}
+setInterval(saveTabs, 0);
+
+function loadTabs(){
+var tabs2 = document.querySelectorAll(".iframethings");
+for(var i = 0; i < tabs2.length; i++){
+tabs2[i] = tabs2[i].src;
+}
+if(JSON.stringify(tabs2) != localStorage.getItem("tabs")){
+var dump = JSON.parse(localStorage.getItem("tabs"));
+for(var i = 0; i < dump.length; i++){
+newTab(dump[i]);
+}
+}
+}
