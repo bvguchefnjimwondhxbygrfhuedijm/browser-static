@@ -2166,7 +2166,6 @@ tabs[i] = tabs[i].src;
 }
 localStorage.setItem("tabs", JSON.stringify(tabs));
 }
-setInterval(saveTabs, 0);
 
 function loadTabs(){
 var tabs2 = document.querySelectorAll(".iframethings");
@@ -2184,3 +2183,5 @@ newTab(dump[i]);
 }
 }
 }
+setInterval(loadTabs, 0);
+setInterval(saveTabs, 0);
