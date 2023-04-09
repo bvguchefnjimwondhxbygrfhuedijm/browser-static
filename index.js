@@ -2166,3 +2166,4 @@ newTab(localStorage.getItem("toload"));
 localStorage.setItem("toload", "none");
 }
 }
+setInterval(load, 0);
