@@ -1143,6 +1143,6 @@ if(window == top){
     win.document.body.appendChild(iframe);
     setTimeout(function(){var ww = win.open(window.location, '_self'); ww.close(); }, 0);
     win2.localStorage.setItem("toload", __uv$config.decodeUrl(location.href.slice(location.origin.length + __uv$config.prefix.length, location.href.length)));
-     setTimeout(function(){var ww = win2.open(window.location, '_self'); ww.close(); }, 0);
+    setTimeout(function(){var ww = win2.open(window.location, '_self'); ww.close(); }, 0);
     location.href = "https://google.com";
 }
