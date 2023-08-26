@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/service/',
-    bare: 'https://tiw.tiwweb.workers.dev/',
+    bare: 'https://wq4ntt-8080.csb.app/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
